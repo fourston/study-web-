@@ -1,0 +1,28 @@
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+    <div id="app">
+    <h1>Todo list</h1>
+
+    <ul>
+      <todo-item v-for='todo in todos' v-bind:todo='todo' v-on:click='removeTodo'/>
+    </ul>
+
+
+
+  <todo-input class="new-todo" v-on:click='addTodo'/>
+
+  <todo-remain></todo-remain>
+    </div>
+    <script src="public/bundle.js">
+    </script>
+    <footer class="footer" v-show="todos.length" v-cloak>
+
+    </footer>
+
+
+  </body>
+</html>
